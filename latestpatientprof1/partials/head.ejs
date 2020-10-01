@@ -1,0 +1,118 @@
+<head>
+  <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <link rel="icon" href="logo1.png" style="width:10px ">
+
+    <!-- Title Page-->
+    <title>SecureHealth</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+
+<style>
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('/simple-pre-loader/images/loader-128x/Preloader_2.gif') center no-repeat #fff;
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+    //paste this code under head tag or in a seperate js file.
+    // Wait for window load
+    $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");;
+    });
+</script>
+
+
+</head>
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d4 w3-left-align w3-large" >
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="/patientaddrec" class="w3-bar-item w3-button w3-padding-large "><img src="logo1.png" height="50" width="60"></i></a>
+  
+  
+    <a href="http://localhost:8080/patientaddrec" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Dashboard" text-align="left">Dashboard</a>
+  
+  
+ </div>
+</div>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-theme-d4 w3-animate-left" style="z-index:5;width:250px;top: 55px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <center><img src="patienticon.png" style="width:45%;" class="w3-round"><br><br></center>
+    <h6><b><%=email %></b></h6>
+    <p class="w3-text-grey">   </p>
+  </div>
+  <div class="w3-bar-block">
+   <a href="/patientaddrec" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-pencil fa-fw w3-margin-right"></i>ADD MEDICAL RECORDS</a> 
+    <a href="/patientmedhistory" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-th-large fa-fw w3-margin-right"></i>MY MEDICAL HISTORY</a> 
+    <a href="/patientdoclist" onclick="w3_close()" class="w3-bar-item w3-button w3-padding  w3-text-white"><i class="fa fa-user fa-fw w3-margin-right"></i>DOCTORS LIST</a> 
+    <a href="/revoke" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-unlock fa-fw w3-margin-right"></i>REVOKE ACCESS </a>
+    <a href="/viewpres" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white">&nbsp;<i class='fas fa-prescription w3-margin-right'></i>VIEW PRESCRIPTION </a>
+   
+     <div class="p-t-15">
+      <form method="post" action="/logout">
+                            <center><button class="btn btn--radius-2 btn--blue" type="submit" style="background:#ff3300">LOGOUT</button></center>
+                            </form>
+                        </div>
+    
+  </div>
+ 
+</nav>

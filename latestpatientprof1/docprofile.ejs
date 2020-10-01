@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<%- include('partials/dochead.ejs') %>
+
+
+
+<body class="w3-light-grey w3-content" style="max-width:1600px; ">
+<div class="se-pre-con"></div>
+
+    <!--My Patients-->
+  <div class="transbox" style = "background-color: #ffffff;opacity: 0.6;filter: alpha(opacity=60);position:relative; left:160px;  top:55px; height:2000px; width:1000px"  id="dashb">
+        <div class="wrapper wrapper--w680" style="max-width: 950px;">
+            <div class="card card-4">
+                <div class="card-body">
+                 <h1 class="title" id="myhistory" style="font-size:50px; color:#000000;font-family:'Lato',sans-serif;"><center>Medical Records</center></h1>
+                     <% for (var d=0;d<docs.length;d++){ %>
+ <div class="w3-container w3-card w3-white w3-round w3-margin" style=" border-style: inset;-webkit-box-shadow: 0 6px 6px -6px rgb(0,0,0,0.7); box-shadow: 0 6px 6px -6px rgb(0,0,0,0.7); border: 1px solid rgb(0,0,0,0.7);position:relative;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19) ;"><br>
+
+             <form method="post">
+               <h4  style="font-size:30px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;">Asset ID:<span style="padding-left: 10px;font-size:25px;font-weight: bold; color:#264d73;font-family:'Lato',sans-serif;"><%= docs[d].metadata.id %></span></h4>
+
+               <h4  style="font-size:30px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;">Email ID:<span style="padding-left: 10px;font-size:25px;font-weight: bold; color:#264d73;font-family:'Lato',sans-serif;"><%= r[d] %></span></h4>
+                
+                <br>
+          
+            <center>
+            <div class="p-t-15" style="position: relative;display: inline-block;margin-left: 0px;margin-right: 0px;margin-bottom: 3px;">
+           
+                            <button class="btn btn--radius-2 btn--blue" type="submit" value="<%=docs[d].metadata.id%>" formaction="/prescription" name="aid">Give Prescription</button>&nbsp
+                        
+                            <button class="btn btn--radius-2 btn--blue" type="submit" value="<%= docs[d].metadata.email%>" name="bemail" formaction="/profiled">Check Profile</button>
+                            <button class="btn btn--radius-2 btn--blue" type="submit" value="<%= docs[d].metadata.id%>" name="id" formaction="/docview">View Report</button>
+                             
+                        </div>
+            </center>
+                      </form>
+                      <br>
+      </div>
+      <% } %>
+      
+      </div>
+      </div>
+      </div>
+      </div>
+      <div id="popup1" class="overlay">
+    <div class="popup">
+        <h2>EMERGENCY!!!</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <form method="post" action="/emgsave">
+                 <h4  style="font-size:30px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;">Patient Email: <input type="text" name="patemail"><br>
+                 <h4  style="font-size:30px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;">incident:<input type="text" name="incident"><br><br>
+                 <center> <button class="btn btn--radius-2 btn--blue" type="submit"  name="id" >Submit</button></center>
+        </div>
+    </div>
+               

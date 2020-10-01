@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px;background-repeat: no-repeat;background-attachment: fixed;background-size: cover; ">
+<div class="se-pre-con"></div>
+   <!-- Doctors List -->
+<div class="transbox" style = "background-color: #ffffff;opacity: 0.6;filter: alpha(opacity=60);position:absolute; left:160px; top:55px;height:1000px; width:1200px "  id="dashb">
+        <div class="wrapper wrapper--w680" style="max-width: 950px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);">
+            <div class="card card-4">
+                <div class="card-body">
+                   <h1 class="title" id="doclist" style="font-size:50px;font-weight: bold; color:#000000;font-family:'Lato',sans-serif;">EMERGENCY!!!</h1>
+                   <div class="search-container" style="float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 26px;
+  background: #ffffff;
+  font-size: 21px;
+  border: none;
+  cursor: pointer;">
+   
+  </div>
+
+  <% for (var d=0;d<docs.length;d++){ %>
+<!--<div class=" w3-card w3-white w3-round w3-margin" style="border-style:inset;border-color:#2404d9;height:400px;width:850px;left:70px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);" ><br>
+  
+       <center style="position:relative;top:10px;font-size:30px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;text-transform:uppercase;">Dr.&nbsp<%= docs[d].fname %> &nbsp<%= docs[d].lname %></center>
+             <form action="/emergency" method="post">
+               <h4  style="font-size:20px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;position: relative;top:30px;left:10px">&#9830;SPECIALIZATION:</h4> <h4 style="font-size:20px;font-weight: bold; color: #024db8;font-family:'Lato',sans-serif;position: relative;top:-10px;left:175px"><%=docs[d].spl %></h4>
+
+                 <h4  style="font-size:20px;font-weight: bold; color:#0a0a0a;font-family:'Lato',sans-serif; position: relative;top:30px;left:10px">&#9830;PHONE NO:</h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-10px;left:125px"><%=docs[d].phone %></h4>
+              <h4  style="font-size:20px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif; position: relative;top:30px;left:10px;"> &#9830;QUALIFICATION: </h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-10px;left:180px"><%=docs[d].qual %></h4>
+                <h4  style="font-size:20px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;  position: relative;top:-207px;left: 400px;">&#9830;EMAIL:</h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-247px;left:480px"><%=docs[d].email %></h4>
+                 <h4  style="font-size:20px;font-weight: bold; color:##000008;font-family:'Lato',sans-serif;  position: relative;top:-207px;left: 400px;"> &#9830;CURRENT WORKPLACE:</h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-247px;left:625px">  <%=docs[d].cw %></h4>
+                  <h4  style="font-size:20px;font-weight: bold; color:##000008;font-family:'Lato',sans-serif;  position: relative;top:-207px;left: 400px;"> &#9830;WORK EXP:</h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-247px;left:520px"><%=docs[d].we %>yrs</h4>
+           
+<br>
+                       <button class="btn btn--radius-2 btn--blue" type="submit" style="position:relative;top:-270px;left:-10px;float:right;background:#00344d;" onclick="abc()" value="<%= docs[d].email%>" name="value">Give Access</button>      
+
+                       
+                       </form> 
+      </div>-->
+      <div class=" w3-card w3-white w3-round w3-margin" style="border-style:inset;height:400px;width:850px;left:70px; -webkit-box-shadow: 0 6px 6px -6px rgb(0,0,0,0.7); box-shadow: 0 6px 6px -6px rgb(0,0,0,0.7); border: 1px solid rgb(0,0,0,0.7);" ><br>
+  
+        <center style="position:relative;top:10px;font-size:30px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;"><i class="fa fa-user-md"></i>&nbsp;&nbsp;&nbsp;Dr.&nbsp;<%= docs[d].fname %> &nbsp<%= docs[d].lname %></center>
+              <form action="/emergency" method="post">
+                <h4  style="font-size:20px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;position: relative;top:30px;left:10px"><i class="fa fa-user-o"></i>&nbsp;&nbsp;&nbsp;Specialization:</h4> <h4 style="font-size:20px;font-weight: bold; color: #024db8;font-family:'Lato',sans-serif;position: relative;top:-10px;left:165px"><%=docs[d].spl %></h4>
+ 
+                  <h4  style="font-size:20px;font-weight: bold; color:#0a0a0a;font-family:'Lato',sans-serif; position: relative;top:30px;left:10px"> <i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;Phone No:</h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-10px;left:120px">&nbsp;&nbsp;<%=docs[d].phone %></h4>
+               <h4  style="font-size:20px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif; position: relative;top:30px;left:10px;"> <i class="fa fa-id-card"></i>&nbsp;&nbsp;&nbsp;Qualification: </h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-10px;left:165px"><%=docs[d].qual %></h4>
+                 <h4  style="font-size:20px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;  position: relative;top:-207px;left: 400px;"><i class="fa fa-envelope-open"></i>&nbsp;&nbsp;&nbsp;Email:</h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-247px;left:490px">&nbsp;<%=docs[d].email %></h4>
+                  <h4  style="font-size:20px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;  position: relative;top:-207px;left: 400px;"> <i class="fa fa-building"></i>&nbsp;&nbsp;&nbsp;Current Workplace:</h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-247px;left:595px">&nbsp;&nbsp;<%=docs[d].cw %></h4>
+                   <h4  style="font-size:20px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;  position: relative;top:-207px;left: 400px;"> <i class="fa fa-briefcase"></i>&nbsp;&nbsp;&nbsp;Work Exp:</h4><h4 style="font-size:20px;font-weight: bold; color:#024db8;font-family:'Lato',sans-serif;position: relative;top:-247px;left:520px">&nbsp;<%=docs[d].we %>yrs</h4>
+            
+ <br> <br>
+                        <center><button class="btn btn--radius-2 btn--blue" type="submit" style="position:relative;top:-270px;left:-10px;float:center;background:#00344d;" value="<%= docs[d].email%>" name="value" onclick="abc()">Give Access</button></center>
+ 
+                        
+                        </form> 
+       </div>
+      <% } %>
+         <script>
+function abc() {
+  alert("Records have been transfered to the doctor.");
+}
+</script>

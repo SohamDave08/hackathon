@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<body class="w3-light-grey w3-content">
+  <div class="se-pre-con"></div> 
+   <!--Add Medical Records-->
+
+    <!--Upload Medical Records-->
+<div class="transbox" style = "background-color: #ffffff;opacity: 0.6;filter: alpha(opacity=60);position:relative;top:100px;left:260px; height:1000px; width:1000px  "  >
+        <div class="wrapper wrapper--w680" style="box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);">
+            <div class="card card-4">
+                <div class="card-body">
+              <h1 class="title" id="addreco" style="font-size:50px;font-weight:900; color:#000000;font-family:'Lato',sans-serif;" >UPLOAD MEDICAL REPORTS</h1>
+                    <form method="post" action="/submitrec"  enctype="multipart/form-data">
+                         <div class="row row-space">
+                            <div class="col-2">
+
+                                <div class="input-group">
+                                  
+                                    <label class="label" style="font-family:'Lato',sans-serif;color:#204060">Description of the uploaded file</label>
+  <input type="text" name="d" class="input--style-4" style="border: solid; font-size: 20px;color:#204060;" ><br><br>
+
+                                    <input type="file"  name="fileupload"><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" style="float:right;background:#00344d;" type="submit" onclick="abc()"  >Submit</button>
+                            <div class="se-pre-con"></div>
+                        </form>
+                        </div>
+                       
+                  </div>
+                </div>
+              </div>
+              <script>
+function abc() {
+  alert("Are you sure you want to submit this file");
+}
+</script>
+     <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+    
+ 
