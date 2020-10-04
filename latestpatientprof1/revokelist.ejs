@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px; background-repeat: no-repeat;background-attachment: fixed;background-size: cover; ">
+<div class="se-pre-con"></div>
+   <!-- Doctors List -->
+<div class="transbox" style = "background-color: #ffffff;opacity: 0.6;filter: alpha(opacity=60);position:absolute; left:160px; top:55px;height:1000px; width:1200px "  id="dashb">
+        <div class="wrapper wrapper--w680" style="max-width: 950px;">
+            <div class="card card-4">
+                <div class="card-body">
+                   <h2 class="title" id="doclist" style="font-size:40px;font-weight: bold; color:#000000;"><center>Doctors</center></h2>
+                   <div class="search-container" style="float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 26px;
+  background: #ffffff;
+  font-size: 21px;
+  border: none;
+  cursor: pointer;">
+   
+  </div>
+           <% for (var d=0;d<doc[0].metadata.doclist.length;d++){ %>
+<div class="w3-container w3-card w3-white w3-round w3-margin" style="border-style: inset;box-shadow: 0 6px 6px -6px rgb(0,0,0,0.7); box-shadow: 0 6px 6px -6px rgb(0,0,0,0.7); border: 1px solid rgb(0,0,0,0.7);position:relative;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19) ;"><br>
+ <h4  style="font-size:20px;font-weight: bold; color:#000000;">Email:<span style="padding-left: 10px;font-size:25px;font-weight: bold; color:#264d73;font-family:'Lato',sans-serif;"> <%= doc[0].metadata.doclist[d] %></span></h4>
+
+  <h4  style="font-size:20px;font-weight: bold; color:#000000;">ID:<span style="padding-left: 10px;font-size:25px;font-weight: bold; color:#264d73;font-family:'Lato',sans-serif;"> <%= doc[0].metadata.id %></span></h4>
+
+ <form  method="post">  
+<center><button class="btn btn--radius-2 btn--blue" type="submit" onclick="abc()" value=<%= doc[0].metadata.doclist[d] %> name="b" formaction="/finalrevoke">revoke</button></center>
+    </form>  
+    <br>                
+</div>
+ <% } %>
+          </div>
+      </div>  
+      
+      </div>
+            </div>
+        </div>
+    </div> 
+                 <script>
+function abc() {
+  alert("Are you sure you want to revoke the access of medical record from the doctor");
+}
+</script>

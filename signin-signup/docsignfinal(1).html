@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SecureHealth</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+<link rel="stylesheet" href="./style1.css">
+<link rel="icon" href="logo1.png" style="width:10px ">
+
+</head>
+<body style="background-color:white;
+	background-image:url(Picture1.jpg), url(Picture2.jpg), url(Picture3.png),url(Picture.jpg);
+	background-position:left top, right top, left bottom,right bottom;
+	background-repeat:no-repeat, no-repeat, no-repeat, no-repeat;
+	background-attachment: fixed,fixed,fixed,fixed">
+	
+	
+	<div class="login-wrap">
+		<img src="logo1.png" height="200" width="450" style="padding-left: 10%; margin-left: 5%;">
+
+		<div class="login-html">
+			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+			<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+			<div class="login-form">
+				<div class="sign-in-htm">
+			<form method="POST" action="dlogin">
+			  <br>
+			  <div class="group">
+				<label for="user" class="label">Username</label>
+				<input id="user" type="text" class="input">
+			  </div>
+			  <div class="group">
+				<label for="pass" class="label">Password</label>
+				<input id="pass" type="password" class="input" data-type="password">
+			  </div>
+			  <br>
+			  <div class="group">
+				<input id="check" type="checkbox" class="check" checked>
+				<label for="check"><span class="icon"></span> Keep me Signed in</label>
+			  </div>
+			  <div class="hr"></div>
+			  <div class="group">
+				<input type="submit" class="button" value="Sign In">
+			  </div>
+			  
+			  <div class="foot-lnk">
+	<!--             <a href="#forgot">Forgot Password?</a> -->
+			  </div>
+			</form>
+				</div>
+				<div class="sign-up-htm">
+			<form name="dsignup" method="POST" action="/dsignup">
+					<div class="group">
+						<label for="fname" class="label">First Name</label>
+						<input id="fname" type="text" class="input">
+					</div>
+					<div class="group">
+						<label for="lname" class="label">Last Name</label>
+						<input id="lname" type="text" class="input" >
+					</div>
+					<div class="group">
+						<label for="mailadd" class="label">Email</label>
+						<input id="mailadd" type="text" class="input" >
+					</div>
+					<div class="group">
+						<label for="pass" class="label">Password</label>
+						<input id="pass" type="password" class="input" data-type="password">
+					</div>			
+			
+					<div class="group">
+						<label for="pno" class="label">Phone No</label>
+						<input id="pno" type="text" class="input" name="phone" length="10"required>
+					</div>				
+					<div class="group">
+						<input type="submit" class="button" value="Sign Up">
+					</div>
+					<div class="foot-lnk">
+						<label for="tab-1">Already Member?</a>
+					</div>
+			</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- partial -->
+  
+</body>
+</html>

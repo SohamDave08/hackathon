@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px;background-repeat: no-repeat;background-attachment: fixed;background-size: cover; ">
+<div class="se-pre-con"></div>
+  <!--AccessTransfer-->
+  <div class="transbox" style = "background-color: #ffffff;opacity: 0.6;filter: alpha(opacity=60);position:absolute; left:160px; height:1000px; width:1100px "  id="dashb">
+        <div class="wrapper wrapper--w680" style="max-width: 950px;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);">
+            <div class="card card-4">
+                <div class="card-body">
+                   <h1 class="title" id="accesslist"style="font-size:50px;font-weight: bold; color:#000000;font-family:'Lato',sans-serif;">ACCESS TRANSFER</h1>
+ 
+
+
+
+
+        <div ><br>
+   <form method="post" action="/check">
+    <table >
+      <tr>
+      <th  style="width:200px;height: 70px;padding: 15px;text-align: left; font-size:30px;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;">CHECKBOX</th>
+      <th  style="width:200px;font-size:30px;padding: 25px;text-align: left;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;">ID</th>
+      <th  style="width:200px;font-size:30px;padding: 15px;text-align: left;font-weight: bold; color:#000008;font-family:'Lato',sans-serif;">DESCRIPTION</th>
+    </tr>
+<% for (var d=0;d<doc.length;d++){ %>
+<tr>
+ <td height="50px"><input class="lists[Access] " type="checkbox" style="height: 20px;" name=<%= d %> value=<%= doc[d].data.id %> /></td>
+<td><b style="font-size:25px;padding: 15px;text-align: left;font-weight: bold; color:#264d73;font-family:'Lato',sans-serif;"> <%= doc[d].data.id %></b> <br> </td>
+<td> <b style="font-size:25px;padding: 25px;text-align: left;font-weight: bold; color:#264d73;font-family:'Lato',sans-serif;"> <%= doc[d].data.description %></b> </td>
+</tr>
+ <% } %>
+</table>
+ <br>
+ <br>
+    <button class="btn btn--radius-2 btn--blue" type="submit" style=" width: 800px; float:right;background:#00344d;" value= "submit" onclick="abc()">submit</button>                      
+ </form>                  
+</div>
+
+
+
+
+
+                 </div>
+               </div>
+             </div>
+             <script>
+function abc() {
+  alert("Access of your medical records will be given to the doctor");
+}
+</script>
+
+           
